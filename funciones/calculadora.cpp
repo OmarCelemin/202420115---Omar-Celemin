@@ -49,40 +49,25 @@ int main()
         result = sumNumbers(num1, num2);
         cout << "El resultado es: " << result << "\n";
         break;
-        
+
     case '-':
         result = subNumbers(num1, num2);
         cout << "El resultado es: " << result << "\n";
         break;
-<<<<<<< HEAD
 
     case '*':
         result = multiplyNumbers(num1, num2);
         cout << "El resultado es: " << result << "\n";
         break;
 
-    case '/':
-        if (num2 == 0)
-        {
-            cout << "No se puede dividir entre 0 \n";     
-        }
-        else
-        {
-=======
-    case '*':
-        result = multiplyNumbers(num1, num2);
-        cout << "El resultado es: " << result << "\n";
-        break;
     case '/':
         if (num2 == 0)
         {
             cout << "No se puede dividir entre 0 \n";
-            break;
         }
         else
         {
 
->>>>>>> ea7ce2d805c4432c7a2a7f0c3d7102fb308a27bf
             result = divideNumbers(num1, num2);
             cout << "El resultado es: " << result << "\n";
         }
