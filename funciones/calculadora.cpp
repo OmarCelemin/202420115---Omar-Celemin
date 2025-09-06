@@ -1,73 +1,75 @@
 #include <iostream>
 using namespace std;
 
-int sumOperation(int num1, int num2)
+int sumNumbers(int a, int b)
 {
-    int result = num1 + num2;
+    int result;
+    result = a + b;
     return result;
 }
 
-int subOperation(int num1, int num2)
+int subNumbers(int a, int b)
 {
-    int result = num1 - num2;
+    int result;
+    result = a - b;
     return result;
 }
 
-int multiplyOperation(int num1, int num2)
+int multiplyNumbers(int a, int b)
 {
-    int result = num1 * num2;
+    int result;
+    result = a * b;
     return result;
 }
 
-int divisionOperation(int num1, int num2)
+double divideNumbers(double a, double b)
 {
-    int result = num1 / num2;
-    return result;
-}
-
-int moduleOperation(int num1, int num2)
-{
-    int result = num1 % num2;
+    double result;
+    result = a / b;
     return result;
 }
 
 int main()
 {
-    int num1, num2, result;
+
+    int num1, num2;
+    double result;
     char operation;
 
-    cout << "dame un numero ";
-    cin >> num1;
-    cout << "dame otro numero ";
-    cin >> num2;
-    cout << " Que operacion quieres hacer? (+, -, *, /, %): ";
+    cout << " Qué operacion quieres hacer? (+, -, *, /) :) ";
     cin >> operation;
+    cout << "dame un número ";
+    cin >> num1;
+    cout << "dame otro número ";
+    cin >> num2;
+
     switch (operation)
     {
     case '+':
-        result = sumOperation(num1, num2);
+        result = sumNumbers(num1, num2);
         cout << "El resultado es: " << result << "\n";
         break;
     case '-':
-        result = subOperation(num1, num2);
+        result = subNumbers(num1, num2);
         cout << "El resultado es: " << result << "\n";
         break;
     case '*':
-        result = multiplyOperation(num1, num2);
+        result = multiplyNumbers(num1, num2);
         cout << "El resultado es: " << result << "\n";
         break;
     case '/':
-        result = divisionOperation(num1, num2);
-        cout << "El resultado es: " << result << "\n";
-        break;
-    case '%':
-        result = moduleOperation(num1, num2);
-        cout << "El resultado es: " << result << "\n";
-        break;
+        if (num2 == 0)
+        {
+            cout << "No se puede dividir entre 0 \n";
+            break;
+        }
+        else
+        {
 
-    default:
+            result = divideNumbers(num1, num2);
+            cout << "El resultado es: " << result << "\n";
+        }
         break;
     }
-
     return 0;
 }
