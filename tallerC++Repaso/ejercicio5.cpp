@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int mayor (int firtsNumber, int secondNumber)
+int mayor(int firtsNumber, int secondNumber)
 {
     if (firtsNumber > secondNumber)
     {
@@ -24,5 +24,4 @@ int main()
     result = mayor(firtsNumber, secondNumber);
     cout << "El numero mayor es: " << result << "\n";
     return 0;
-
 }

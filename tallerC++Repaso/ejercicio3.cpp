@@ -6,18 +6,19 @@ void mostrarTabla(int number)
 {
     int limit = 10;
     int result;
-    cout << "Tabla de multiplicar del " << number << "\n";
+    cout << "\nTabla de multiplicar del " << number << "\n\n";
 
-    for (int i = 0; i < limit; i++)
+    for (int i = 0; i <= limit; i++)
     {
         result = number * i;
         cout << number << " x " << i << " = " << result << "\n";
     }
+    cout << "\n";
 }
 int main()
 {
     int number;
-    cout << "Ingrese un numero entero: ";
+    cout << "Ingrese un numero entero:";
     cin >> number;
     mostrarTabla(number);
     return 0;

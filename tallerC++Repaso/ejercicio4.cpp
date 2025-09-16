@@ -6,17 +6,18 @@ void contarDesendente(int number)
 {
     while (number >= 0)
     {
-        cout << number << "\n";
+        cout << number << " ";
         number--;
     }
 }
 
 void contarAsendente(int number)
 {
-    while (number >= 0)
+    int i = 0;
+    while (i <= number)
     {
-        cout << number << "\n";
-        number++;
+         cout << i << " ";
+        i++;
     }
 }
 
@@ -27,7 +28,7 @@ int main()
     cin >> number;
     cout << "Contando de forma descendente: " << "\n";
     contarDesendente(number);
-    cout << "Contando de forma ascendente: " << "\n";
+    cout << "\n Contando de forma ascendente: " << "\n";
     contarAsendente(number);
     return 0;
 }
