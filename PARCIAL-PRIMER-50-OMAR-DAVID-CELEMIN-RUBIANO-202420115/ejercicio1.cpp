@@ -9,17 +9,18 @@ void checkpackages(int packageNum)
         cout << "Paquetes revisados con exito: ";
         for (int i = 2; i <= packageNum; i += 2)
         {
-            cout << i << " ";
+            cout << i << ", ";
         }
+        cout <<":)\n";
     }
     else
     {
         cout << "Paquetes revisados con exito: ";
         for (int i = 1; i <= packageNum; i += 2)
         {
-            cout << i << " ";
+            cout << i << ", ";
         }
-        
+        cout <<":)\n";
     }
 }
 
@@ -29,5 +30,5 @@ int main()
     cout << "Ingrese el numero de paquetes a revisar:  ";
     cin >> packageNum;
     checkpackages(packageNum);
-    return 0
+    return 0;
 }

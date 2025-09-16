@@ -9,12 +9,13 @@ void checkTurn(int start, int end)
         cout << "La maquina opero durante los turnos: ";
         for (int i = start; i <= end; i++)
         {
-            cout << i << " ";
+            cout << i << ", ";
         }
+        cout <<":)\n";
     }
     else
     {
-        cout << "Error parametros mal ingresados :( ";
+        cout << "Error parametros mal ingresados el turno de fin no puede ser menor al de inicio :( \n";
     }
 }
 

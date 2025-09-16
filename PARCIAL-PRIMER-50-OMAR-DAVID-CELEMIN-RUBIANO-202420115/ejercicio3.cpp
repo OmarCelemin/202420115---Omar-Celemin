@@ -28,11 +28,11 @@ int main()
 
     if (status)
     {
-        cout << "El sistema requiere mantenimiento";
+        cout << "El sistema requiere mantenimiento -_-\n";
     }
     else
     {
-        cout << "El sistema todavia no requiere mantenimiento";
+        cout << "El sistema todavia no requiere mantenimiento :)\n";
     }
     
 
