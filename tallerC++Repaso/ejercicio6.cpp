@@ -4,16 +4,29 @@ using namespace std;
 
 int mayorDeTres(int a, int b, int c)
 {
-    switch (a)
+    if (a > b)
     {
-    case constant expression:
-        /* code */
-        break;
-    
-    default:
-        break;
+        if (a > c)
+        {
+            return a;
+        }
+        
     }
-    
+    else if (b > c)
+    {
+        if (b > a)
+        {
+            return b;
+        }
+    }
+    else if (c > a)
+    {
+        if (c > b)
+        {
+            return c;
+        }   
+    }
+
 }
 int main()
 {
