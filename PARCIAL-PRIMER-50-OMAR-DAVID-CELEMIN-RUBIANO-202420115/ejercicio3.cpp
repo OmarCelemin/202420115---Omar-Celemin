@@ -23,8 +23,8 @@ int main()
     cin >> sheetsNum;
     cout << "Ahora el intervalo: ";
     cin >> interval;
-
-    status = requireMaintenance(sheetsNum, interval);
+requireMaintenance(sheetsNum, interval)
+    status = ;
 
     if (status)
     {

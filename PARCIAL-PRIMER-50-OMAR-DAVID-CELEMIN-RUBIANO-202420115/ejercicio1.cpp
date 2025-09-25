@@ -12,8 +12,7 @@ void checkpackages(int packageNum)
             cout << i << ", ";
         }
         cout <<":)\n";
-    }
-    else
+    } else
     {
         cout << "Paquetes revisados con exito: ";
         for (int i = 1; i <= packageNum; i += 2)
@@ -21,6 +20,7 @@ void checkpackages(int packageNum)
             cout << i << ", ";
         }
         cout <<":)\n";
+   
     }
 }
 
