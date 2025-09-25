@@ -14,6 +14,6 @@ int main()
     cout << "\nIngrese su estatura (en metros): ";
     cin >> stature;
     stature = stature * 100; 
-    cout << "\nHola " << name << ", tienes " << age << " años y mides " << stature << " metros." << "\n";
+    cout << "\nHola " << name << ", tienes " << age << " años y mides " << stature << " centimetros." << "\n";
     return 0;
 }
