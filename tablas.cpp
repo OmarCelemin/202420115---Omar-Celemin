@@ -1,29 +1,34 @@
-#include <iostream>
+#include <stdio.h>
+
 using namespace std;
 
-int numplayer2, numberselected;
-
-int main()
+int calculateTotal(int hours, int rate)
 {
-    cout << "dame un numero ";
-    cin >> numplayer2;
-    cout << "debes adivinar un numero ";
-    cin >> numberselected;
-
-    while (numplayer2 != numberselected)
-    {
-        if (numberselected < numplayer2)
-        {
-            cout << "\n el numero es mayor intentalo de nuevo :( ";
-            cin >> numberselected;
-        }
-        else
-        {
-            cout << "\n el numero es menor intentalo de nuevo :( ";
-            cin >> numberselected;
-        }
-    }
-    cout << "Correcto el numero a adivinar era el " << numplayer2 << " :)\n";
-
-    return 0;
+    int total;
+    total = hours * rate;
+    return total;
 }
+
+void printlnVoice(int hours, int rate, string plate)
+{
+    int total;
+    total = calculateTotal(hours, rate);
+    cout << "Vehiculo: " << plate << "Horas: " << hours << "Tarifa: " << "Total: " << total << "\n";
+    
+    }
+
+    int main()
+    {
+        string plate;
+        int hours, rate;
+        cout << "ingrese las horas de estacionamieto.";
+        cin >> hours;
+        cout << "ingrese la tarifa por hora.";
+        cin >> rate;
+        cout << "ingrese la placa del vehiculo";
+        cin >> plate;
+        calculateTotal(hours, rate);
+        printlnVoice(hours, rate, plate);
+
+        return 0;
+    }
