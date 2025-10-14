@@ -5,12 +5,18 @@ void commonLetters()
 {
     char string1[50];
     char string2[50];
-    int contador = 0, len1 = 0, len2 = 0;
+    int contador = 0, len1, len2;
 
     cout << "Primera palabra: ";
     cin >> string1;
     cout << "Segunda palabra: ";
     cin >> string2;
+
+     for (int i = 0; string1[i]; i++)
+        len1++;
+
+    for (int j = 0; string2[j]; j++)
+        len2++;
 
     for (int i = 0; string1[i] <= len1; i++)
     {
@@ -40,3 +46,4 @@ int main()
     commonLetters();
     return 0;
 }
+
