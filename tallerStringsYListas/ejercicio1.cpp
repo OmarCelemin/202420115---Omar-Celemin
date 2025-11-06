@@ -16,8 +16,8 @@ void counterChar()
         }
     }
 
-    cout << "El string: " << palabra << "contiene: \n"
-         << palabra.length() << " caracteres contando los espcacios.\n"
+    cout << "El string: " << palabra << " contiene: \n"
+         << palabra.length() << " caracteres contando los espacios.\n"
          << counter << " caracteres sin espacios";
 }
 

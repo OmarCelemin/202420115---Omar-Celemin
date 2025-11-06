@@ -5,11 +5,15 @@ void productosPrecios()
 {
     string productos[6] = {"Manzanas", "Peras", "Uvas", "Bananas", "Mangos", "Fresas"};
     float precios[6] = {1500, 2300, 1800, 3100, 2700, 2600};
+
     float total = 0;
-    cout << "A continuacion los productos con sus precios: ";
+
+    cout << "A continuacion los productos con sus precios:\n";
+
     for (int i = 0; i < 6; i++)
     {
         cout << productos[i] << " " << precios[i] << "\n";
+
         total += precios[i];
 
        
@@ -17,7 +21,7 @@ void productosPrecios()
     }
     cout << "\nEl total de los precios es: " << total << "\n";
 
-    cout << " los productos con precios mayores a 2500 son: \n";
+    cout << "\nLos productos con precios mayores o iguales a 2500 son: \n";
 
     for (int i = 0; i < 6; i++)
     {

@@ -7,6 +7,7 @@ void personasMayores()
     int edades[5] = {20, 16, 22, 15, 19};
 
     cout << "Las personas mayores de 18 años son: \n";
+    
     for (int i = 0; i < 5; i++)
     {
         if (edades[i] >= 18)

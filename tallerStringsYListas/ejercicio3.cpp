@@ -12,10 +12,10 @@ void calculatePromAge()
     for (int i = 0; i < 6; i++)
     {
         prom += edades[i];
-        cout << edades[i] << ",";
+        cout << edades[i] << ", ";
     }
     prom = prom / 6;
-    cout << "es: " << prom << ".\n";
+    cout << " es: " << prom << ".\n";
 }
 
 int main()
