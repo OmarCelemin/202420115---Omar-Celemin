@@ -12,7 +12,7 @@ void multasPorCiudad()
     cout << "Ingrese la ciudad a consultar: ";
     cin >> ask;
 
-    cout << "Multas registradas en: " << ask << "\n";
+    cout << "Multas registradas en " << ask << ": \n";
     for (int i = 0; i < 6; i++)
     {
         ciudad = ciudades[i];
