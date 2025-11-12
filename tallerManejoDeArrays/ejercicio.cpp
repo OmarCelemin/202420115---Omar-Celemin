@@ -1,6 +1,7 @@
 #include "iostream"
 using namespace std;
 
+// convierte los imputs del usiario a minusculas para hacer un mejor manejo
 string mayusToMinus(string text)
 {
 
@@ -14,6 +15,7 @@ string mayusToMinus(string text)
     return text;
 }
 
+// obtiene la seleccion del usuario y las envia al switch para procesarlas
 int getUserSelection()
 {
     int userSelection;
@@ -32,6 +34,7 @@ int getUserSelection()
     return userSelection;
 }
 
+//crea las listas de articulos y precios usando punteros
 void getNewSales(string *&articles, int *&prices, int salesSize)
 {
 
@@ -51,6 +54,7 @@ void getNewSales(string *&articles, int *&prices, int salesSize)
     return;
 }
 
+//imprime los valores de las listas 
 void printSales(int prices[], string articles[], int salesSize)
 {
     for (int i = 0; i < salesSize; i++)
@@ -59,6 +63,7 @@ void printSales(int prices[], string articles[], int salesSize)
     }
 }
 
+// modifica una posicion de las listas especificada por el usuario
 void modifySale(int prices[], string articles[], int salesSize)
 {
     int positionToModify, newPrice;
@@ -79,6 +84,7 @@ void modifySale(int prices[], string articles[], int salesSize)
     printSales(prices, articles, salesSize);
 }
 
+// busca un articulo por su nombre y muestra su precio y la posicion en la que se encuentra
 void findSale(int prices[], string articles[], int salesSize)
 {
     string article;
@@ -90,11 +96,12 @@ void findSale(int prices[], string articles[], int salesSize)
     {
         if (articles[i] == article)
         {
-            cout << "El articulo " << article << " se encuentra en la posicion " << i + 1 << " 3y su valor es de: " << prices[i] << "\n";
+            cout << "El articulo " << article << " se encuentra en la posicion " << i + 1 << " y su valor es de: " << prices[i] << "\n";
         }
     }
 }
 
+// muestra los articulos de las listas que se encuentran en un rango de precios
 void salesInRange(int prices[], string articles[], int salesSize)
 {
     int minVal, maxVal;
@@ -114,6 +121,7 @@ void salesInRange(int prices[], string articles[], int salesSize)
     }
 }
 
+// muestra el total de las ventas registradas
 void calculateTotal(int prices[], int salesSize)
 {
     int total = 0;
@@ -124,6 +132,7 @@ void calculateTotal(int prices[], int salesSize)
     cout << "\nEl total en ventas es: " << total;
 }
 
+// esta funcion gestiona todo, elige que mostar o hacer a partir de las instrucciones del usuario
 void run()
 {
     int salesSize = 0, userSelection;
@@ -174,11 +183,11 @@ void run()
             break;
 
         default:
-            cout << "Opcion no valida :(";
             break;
         }
     }
 }
+
 int main()
 {
     run();
