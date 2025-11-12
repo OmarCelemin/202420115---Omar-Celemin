@@ -1,12 +1,6 @@
 #include "iostream"
 using namespace std;
 
-/*string *getNewSales(int salesSize)
-{
-    return
-}
-*/
-
 string mayusToMinus(string text)
 {
 
@@ -24,7 +18,7 @@ int getUserSelection()
 {
     int userSelection;
 
-    cout << "Por favor seleccione:\n\n"
+    cout << "\nPor favor seleccione:\n\n"
          << "1. Registrar o reiniciar ventas.\n"
          << "2. Mostrar todas las ventas.\n"
          << "3. Modificar una venta.\n"
@@ -36,6 +30,25 @@ int getUserSelection()
 
     cin >> userSelection;
     return userSelection;
+}
+
+void getNewSales(string *&articles, int *&prices, int salesSize)
+{
+
+    articles = new string[salesSize];
+    prices = new int[salesSize];
+
+    for (int i = 0; i < salesSize; i++)
+    {
+        cout << "\nIngresa el nombre del articulo: " << i + 1 << ": ";
+        cin >> articles[i];
+        articles[i] = mayusToMinus(articles[i]);
+
+        cout << "\nIngresa el precio del articulo: " << i + 1 << ": ";
+        cin >> prices[i];
+    }
+
+    return;
 }
 
 void printSales(int prices[], string articles[], int salesSize)
@@ -56,6 +69,7 @@ void modifySale(int prices[], string articles[], int salesSize)
 
     cout << "Ingrese el nuevo articulo: ";
     cin >> newArticle;
+    newArticle = mayusToMinus(newArticle);
     articles[positionToModify] = newArticle;
 
     cout << "Ingrese el nuevo precio: ";
@@ -76,7 +90,7 @@ void findSale(int prices[], string articles[], int salesSize)
     {
         if (articles[i] == article)
         {
-            cout << "El articulo " << article << "se encuentra en la posicion " << i + 1 << "y su valor es de: " << prices[i] << "\n";
+            cout << "El articulo " << article << " se encuentra en la posicion " << i + 1 << " 3y su valor es de: " << prices[i] << "\n";
         }
     }
 }
@@ -100,13 +114,23 @@ void salesInRange(int prices[], string articles[], int salesSize)
     }
 }
 
+void calculateTotal(int prices[], int salesSize)
+{
+    int total = 0;
+    for (int i = 0; i < salesSize; i++)
+    {
+        total += prices[i];
+    }
+    cout << "\nEl total en ventas es: " << total;
+}
+
 void run()
 {
     int salesSize = 0, userSelection;
     bool runningStatus = 1;
 
-    int prices[salesSize];
-    string articles[salesSize];
+    int *prices;
+    string *articles;
 
     while (runningStatus)
     {
@@ -117,6 +141,9 @@ void run()
         case 1:
             cout << "\nDame el numero de ventas a registrar: ";
             cin >> salesSize;
+
+            getNewSales(articles, prices, salesSize);
+
             break;
 
         case 2:
@@ -132,12 +159,17 @@ void run()
             break;
 
         case 5:
+            salesInRange(prices, articles, salesSize);
             break;
 
         case 6:
+            calculateTotal(prices, salesSize);
             break;
 
         case 7:
+            delete[] prices;
+            delete[] articles;
+
             runningStatus = 0;
             break;
 
