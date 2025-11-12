@@ -1,7 +1,7 @@
 #include "iostream"
 using namespace std;
 
-// convierte los imputs del usiario a minusculas para hacer un mejor manejo
+// convierte los imputs del usuario a minusculas para hacer un mejor manejo en las funciones secundarias
 string mayusToMinus(string text)
 {
 
