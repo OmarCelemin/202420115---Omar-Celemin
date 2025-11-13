@@ -26,6 +26,9 @@ public:
                 cout << "\nDame el numero de ventas a registrar: ";
                 cin >> salesSize;
 
+                prices = new int[salesSize];
+                articles = new string[salesSize];
+
                 getNewSales();
 
                 break;
@@ -134,7 +137,7 @@ public:
 
         cout << "Ingrese el nuevo articulo: ";
         cin >> newArticle;
-        text = newArticle; 
+        text = newArticle;
         newArticle = mayusToMinus();
         articles[positionToModify] = newArticle;
 
