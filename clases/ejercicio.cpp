@@ -23,12 +23,6 @@ public:
             switch (userSelection)
             {
             case 1:
-                cout << "\nDame el numero de ventas a registrar: ";
-                cin >> salesSize;
-
-                prices = new int[salesSize];
-                articles = new string[salesSize];
-
                 getNewSales();
 
                 break;
@@ -102,6 +96,11 @@ public:
     // crea las listas de articulos y precios usando punteros
     void getNewSales()
     {
+        cout << "\nDame el numero de ventas a registrar: ";
+        cin >> salesSize;
+
+        prices = new int[salesSize];
+        articles = new string[salesSize];
 
         for (int i = 0; i < salesSize; i++)
         {
